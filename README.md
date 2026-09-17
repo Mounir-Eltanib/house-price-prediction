@@ -1,4 +1,4 @@
-\# 🏠 House Price Prediction
+  House Price Prediction
 
 
 
@@ -26,75 +26,24 @@ The application consists of:
 
 
 
-\- 🧹 Data preprocessing and cleaning
+\-  Data preprocessing and cleaning
 
-\- 🤖 Random Forest Regression model
+\-  Random Forest Regression model
 
-\- 📊 Model evaluation
+\-  Model evaluation
 
-\- ⚡ FastAPI backend
+\-  FastAPI backend
 
-\- ⚛️ React frontend
+\-  React frontend
 
-\- 🔗 REST API integration
+\-  REST API integration
 
-\- 📦 Git LFS for the trained model
-
-
-
-\---
-
-
-
-\## 🏗️ Project Architecture
-
-
-
-```text
-
-User
-
-&#x20; │
-
-&#x20; ▼
-
-React Frontend
-
-&#x20; │
-
-&#x20; │ HTTP POST
-
-&#x20; ▼
-
-FastAPI Backend
-
-&#x20; │
-
-&#x20; ▼
-
-Preprocessing Pipeline
-
-&#x20; │
-
-&#x20; ▼
-
-Random Forest Model
-
-&#x20; │
-
-&#x20; ▼
-
-Predicted House Price
-
-
+\-  Git LFS for the trained model
+_______________________________________
 
 📊 Dataset
 
-
-
 The project uses a House Price dataset containing property information such as:
-
-
 
 * Location
 * Carpet Area
@@ -106,20 +55,10 @@ The project uses a House Price dataset containing property information such as:
 * Ownership
 * Facing
 * And other property-related features
-
-
-
-The raw CSV dataset is intentionally not included in this repository.
-
-
-
-🧹 Data Preprocessing
-
-
+_________________________________________
+ Data Preprocessing
 
 The data preparation process includes:
-
-
 
 * Handling missing values
 * Cleaning numerical features
@@ -128,58 +67,30 @@ The data preparation process includes:
 * Feature selection
 * Numerical preprocessing
 * Building a reusable preprocessing pipeline
-
-
-
+________________________________________
 🤖 Machine Learning Model
-
-
 
 The project uses a Random Forest Regressor for house price prediction.
 
-
-
 Model Evaluation
-
-
 
 The model achieved the following results on the test set:
 
-
-
-Metric	Result
-
-MAE	874,823.38
-
-RMSE	2,050,501.86
-
-R²	0.8959
-
-
-
+ Metric	Result
+  MAE	874,823.38
+  RMSE	2,050,501.86
+  R²	0.8959
+  
 The R² score indicates that the model explains approximately 89.6% of the variance in the test data.
-
-
-
-⚡ FastAPI Backend
-
-
-
+__________________________________________________
+ FastAPI Backend
+ 
 The backend provides a REST API for making predictions.
-
-
-
-
-
 Main endpoint
 
-POST /api/predict
-
-
+  POST /api/predict
 
 Example request:
-
-
 
 {
 
@@ -203,13 +114,9 @@ Example request:
 
 }
 
-
-
 \------------------------------------------------------------
 
 Example response:
-
-
 
 {
 
@@ -217,30 +124,20 @@ Example response:
 
 }
 
+
 API Documentation
-
-
 
 When the backend is running, interactive API documentation is available at:
 
-
-
 http://127.0.0.1:8000/docs
 
-
-
+____________________________________________
 ⚛️ React Frontend
-
-
 
 The frontend provides a user-friendly interface where users can enter property information and receive a predicted price.
 
-
-
 The frontend communicates with the FastAPI backend through the prediction API.
-
-
-
+___________________________________________
 📁 Project Structure
 
 house-price-prediction/
@@ -306,116 +203,62 @@ house-price-prediction/
 └── .gitattributes
 
 
-
-
-
 \------------------------------------------------------------
 
+ How to Run the Project
 
+  1\. Clone the repository
 
-🚀 How to Run the Project
+  git clone https://github.com/Mounir-Eltanib/house-price-prediction.git
 
-1\. Clone the repository
+  cd house-price-prediction
 
-git clone https://github.com/Mounir-Eltanib/house-price-prediction.git
 
-cd house-price-prediction
+  2\. Backend Setup
 
+  Create a Python virtual environment:
 
+  python -m venv venv
 
+  Activate it on Windows:
 
+    venv\\Scripts\\activate
 
-2\. Backend Setup
 
+  Install the required packages:
 
+    pip install -r backend/requirements.txt
 
-Create a Python virtual environment:
 
+  Run the FastAPI server:
 
+  uvicorn app.main:app --reload
 
-python -m venv venv
+  The API will be available at:
 
+    http://127.0.0.1:8000
 
+  3\. Frontend Setup
 
-Activate it on Windows:
+  Open another terminal:
 
+    cd frontend
+    
+  Install dependencies:
+    
+    npm install
 
+  Start the development server:
+    
+    npm run dev
 
-venv\\Scripts\\activate
-
-
-
-Install the required packages:
-
-
-
-pip install -r backend/requirements.txt
-
-
-
-Run the FastAPI server:
-
-
-
-uvicorn app.main:app --reload
-
-
-
-The API will be available at:
-
-
-
-http://127.0.0.1:8000
-
-
-
-
-
-3\. Frontend Setup
-
-
-
-Open another terminal:
-
-
-
-cd frontend
-
-
-
-Install dependencies:
-
-
-
-npm install
-
-
-
-Start the development server:
-
-
-
-npm run dev
-
-
-
-The frontend will normally be available at:
-
-
-
-http://localhost:5173
-
-
-
-
-
-🔌 API Workflow
-
-
+  The frontend will normally be available at:
+  
+    http://localhost:5173
+________________________________________
+API Workflow
 
 The prediction flow is:
-
-
 
 Property Details
 
@@ -536,18 +379,11 @@ This keeps the repository clean and suitable for version control.
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 
-
-###### **Author**
-
-
+**Author**
 
 Mounir Mostafa , Youssef Mokhtar
 
-
-
 GitHub:
-
-
 
 https://github.com/Mounir-Eltanib 
 
